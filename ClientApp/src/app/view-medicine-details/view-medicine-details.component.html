@@ -1,0 +1,32 @@
+<h1 id="tableLabel">View Medicine Detail</h1>
+
+<p>This component demonstrates Viewing the Medicine via Retrieved list from server.</p>
+
+<p *ngIf="!medicine"><em>Loading...</em></p>
+
+<button type="button" (click)=history.back>Back</button>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="medicine">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Brand</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Expiry</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let med of medicine">
+      <td>{{med.id}}</td>
+      <td>{{ med.name }}</td>
+      <td>{{ med.brand }}</td>
+      <td>{{ med.price }}</td>
+      <td>{{ med.quantity }}</td>
+      <td>{{ med.expiry }}</td>
+      <td>{{med.notes}}</td>
+    </tr>
+  </tbody>
+</table>

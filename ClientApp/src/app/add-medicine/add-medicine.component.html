@@ -1,0 +1,28 @@
+<p>Add Medicine Record</p>
+<div>
+  <h2></h2>
+  <form>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name-input" [(ngModel)]="medicine.name" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="name">Brand:</label>
+      <input type="text" id="brand-input" [(ngModel)]="medicine.brand" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="date-input">ExpiryDate:</label>
+      <input type="date" id="date-input" [(ngModel)]="medicine.expiry" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="price-input">Price (Rs)</label>
+      <input type="number" id="input-price" [(ngModel)]="medicine.price" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="quantity-input">Quantity </label>
+      <input type="number" id="input-price" [(ngModel)]="medicine.quantity" class="form-control" />
+    </div>
+    <button type="button" class="btn btn-primary" (click)="addMedicineRecord($event);">Upload</button>
+
+  </form>
+</div>

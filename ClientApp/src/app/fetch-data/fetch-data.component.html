@@ -1,0 +1,28 @@
+<h1 id="tableLabel">Search Medicine</h1>
+
+<p>This component demonstrates Seraching the Medicine via Retrieved list from server.</p>
+
+<p *ngIf="!medicines"><em>Loading...</em></p>
+
+<span>Enter the medicine to be serached or it will be Autocompleted</span>
+<input type="text" id="serachmedicine"/>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="medicines">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Brand</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Expiry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let medicine of medicines">
+      <td>{{ medicine.name }}</td>
+      <td>{{ medicine.brand }}</td>
+      <td>{{ medicine.price }}</td>
+      <td>{{ medicine.quantity }}</td>
+      <td>{{ medicine.expiry }}</td>
+    </tr>
+  </tbody>
+</table>

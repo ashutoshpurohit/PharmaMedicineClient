@@ -1,0 +1,30 @@
+<h1 id="tableLabel">ABC Pharma Medicines</h1>
+
+<p>Starting fetching data from the server.</p>
+
+<p *ngIf="!medicines"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="medicines">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Brand.</th>
+      <th>Price.</th>
+      <th>Quantity</th>
+      <th>Expiry</th>
+      <th>View Details</th>
+      <th>Update Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let medicine of medicines">
+      <td>{{ medicine.name }}</td>
+      <td>{{ medicine.brand }}</td>
+      <td>{{ medicine.price }}</td>
+      <td>{{ medicine.quantity }}</td>
+      <td>{{ medicine.expiry }}</td>
+      <td><a href="#" (click)="viewRecord(this)">View</a></td>
+      <td><button type="button" (click)="updateRecord(this)">Update</button></td>
+    </tr>
+  </tbody>
+</table>
